@@ -43,7 +43,7 @@ public class HeaderBtnsRedirectionTest extends BaseTest {
     @Test
     public void RegisterBtnRedirectionTest() {
         loekHomePageRedirections.registerBtnleadsToRegisterPage();
-        Assert.assertEquals("https://app.loekonline.nl/user/register", loekHomePageRedirections.registerBtnleadsToRegisterPage());
+        Assert.assertTrue(loekHomePageRedirections.registerBtnleadsToRegisterPage());
     }
     @Test
     public void RegisterNowBtnRedirectionTest() {

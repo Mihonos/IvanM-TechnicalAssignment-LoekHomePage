@@ -31,6 +31,8 @@ public class LoekHomePageRedirections extends BaseTest {
     WebElement registerNowBtn;
     @FindBy(xpath = "//a[@href='https://loekonline.nl/over-ons/'][contains(.,'over LOEK!')]")
     WebElement overLoekBtn;
+    @FindBy(css = "#submitAanmelden")
+    WebElement registrationBtn;
 
 
     public String logoBtnLeadsToHomePage(){
@@ -55,9 +57,9 @@ public class LoekHomePageRedirections extends BaseTest {
         loginBtn.click();
         return driver.getCurrentUrl();
     }
-    public String registerBtnleadsToRegisterPage(){
+    public boolean registerBtnleadsToRegisterPage(){
         regiterBtn.click();
-        return driver.getCurrentUrl();
+        return registrationBtn.isDisplayed();
     }
     public void registerNowBtnleadsToRegisterPage(){
         //Actions actions = new Actions(driver);
